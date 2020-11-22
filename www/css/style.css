@@ -1,0 +1,82 @@
+:root {
+	font-size: 17px;
+}
+
+body {
+	font-family: 'Dosis', sans-serif;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: gray;
+}
+
+#global-center{
+	width: 80%;
+}
+.container {
+	/* BOOSTRAP OVERRIDE */
+	/* width: 80%; */
+}
+
+.col {
+	/* BOOSTRAP OVERRIDE */
+	text-align: left;
+}
+
+.fullBack {
+	background: black;
+}
+
+.gradient-1 {
+	background: rgb(232, 93, 43);
+	background: -moz-linear-gradient(90deg, rgba(232, 93, 43, 1) 0%, rgba(4, 4, 248, 1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(232, 93, 43, 1) 0%, rgba(4, 4, 248, 1) 100%);
+	background: linear-gradient(90deg, rgba(232, 93, 43, 1) 0%, rgba(4, 4, 248, 1) 100%);
+}
+
+.gradient-2 {
+	background: rgb(7, 172, 156);
+	background: -moz-linear-gradient(90deg, rgba(7, 172, 156, 1) 0%, rgba(106, 4, 248, 1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(7, 172, 156, 1) 0%, rgba(106, 4, 248, 1) 100%);
+	background: linear-gradient(90deg, rgba(7, 172, 156, 1) 0%, rgba(106, 4, 248, 1) 100%);
+}
+
+.gradient-3 {
+	background: rgb(250, 132, 88);
+	background: -moz-linear-gradient(90deg, rgba(250, 132, 88, 1) 0%, rgba(7, 172, 156, 1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(250, 132, 88, 1) 0%, rgba(7, 172, 156, 1) 100%);
+	background: linear-gradient(90deg, rgba(250, 132, 88, 1) 0%, rgba(7, 172, 156, 1) 100%);
+}
+
+.navbar-fuzzy {
+	background: none;
+	border-width: 0 0 1px 0;
+	border-color: white;
+	height: 62px;
+	border-style: solid;
+}
+
+#bigFuzzy {
+	font-size: 8vw;
+	font-weight: 200;
+}
+
+#descriptionFuzzy {
+	font-size: 1.5vw;
+	font-weight: 200;
+	width: 24vw;
+}
+
+@media only screen and (max-width: 800px) {
+
+	#descriptionFuzzy {
+		font-size: 3vw;
+		font-weight: 200;
+		width: 50vw;
+	}
+}
