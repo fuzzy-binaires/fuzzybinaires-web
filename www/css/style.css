@@ -15,12 +15,14 @@ a:hover {
 	color: gray;
 }
 
-#global-center{
+#global-center {
 	width: 80%;
 }
+
 .container {
 	/* BOOSTRAP OVERRIDE */
 	/* width: 80%; */
+	padding: 0;
 }
 
 .col {
@@ -66,8 +68,14 @@ a:hover {
 	padding: 10px;
 }
 
+
+#initial-screen-size{
+	height: 50vh;
+}
+
+
 #bigFuzzy {
-	font-size: 8vw;
+	font-size: 7vw;
 	font-weight: 200;
 }
 
@@ -78,10 +86,33 @@ a:hover {
 }
 
 @media only screen and (max-width: 800px) {
-
 	#descriptionFuzzy {
 		font-size: 3vw;
 		font-weight: 200;
 		width: 50vw;
 	}
+}
+
+#card-section {
+	border: 1px solid white;
+	border-width: 1px 0 1px 0;
+}
+
+.card {
+	/* BOOSTRAP OVERRIDE */
+	/* width: auto; */
+	/* margin: 0 10% 0 10%; */
+	/* border: 1px solid red; */
+	/* background-color: black; */
+	background: none;
+	border: none;
+	padding: 20px;
+	margin: 10px;
+}
+
+.edition-image-fuzzy {
+	/* max-width: 100%; */
+	width: 100px;
+	height: 100px;
+	margin: 10px;
 }
