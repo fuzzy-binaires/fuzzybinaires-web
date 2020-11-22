@@ -61,6 +61,11 @@ a:hover {
 	border-style: solid;
 }
 
+.nav-item {
+	text-align: end;
+	padding: 10px;
+}
+
 #bigFuzzy {
 	font-size: 8vw;
 	font-weight: 200;
