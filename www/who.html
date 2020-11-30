@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<!-- <script src="https://kit.fontawesome.com/762ddd5ea0.js" crossorigin="anonymous"></script> -->
+
+	<!-- <script src="js/jqueryUI/jquery-ui.js"></script> -->
+	<!-- <link rel="stylesheet" href="js/jqueryUI/jquery-ui.css"> -->
+
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+
+
+
+</head>
+
+<body class="fullBack">
+
+	<div class="container vertical-center" id="global-center">
+
+		<nav class="sticky-top navbar navbar-expand-md navbar-dark navbar-fuzzy">
+			<!-- navbar-brand is JUST HERE TO KEEP navbar TOGGLER BUTTON TO THE RIGHT -->
+			<a href="#" class="navbar-brand"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar6">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-stretch" id="navbar6">
+
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">fuzzies</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">motivation</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">editions</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container vertical-center">
+
+			<!-- <div class="container vertical-center" > -->
+
+			<!-- FUZZY TEXT -->
+			<div class="row text-center">
+				<!-- <div class="col" id="weAre">WE ARE</div> -->
+				<div class="col">
+					<div id="whoFuzzy">
+						<p>As Fuzzy Binaires, Agustín Ramos Anzorena, Isabel Paehr and Diego Valverde conceptualise and run
+							interdisciplinary workshops at the intersection of media arts and programming. Working in the
+							fields of electronic arts, game design and machine learning, all three share a passion for
+							transdisciplinary learning and exchange. After spending time and delightful pair programming
+							sessions at the Recurse Center in NYC, they made the creation of inclusive technical spaces their
+							shared concern.
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container vertical-center">
+
+			<!-- EDITIONS CARDS -->
+			<div class="container vertical-center card-section">
+
+				<div class="card-group">
+					<div class="card card-bioFuzzy">
+						<img src="images/borders-symbol.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h3 class="card-title">Agustin Ramos Anzorena</h3>
+							<p class="card-text">As Fuzzy Binaires, Agustín Ramos Anzorena, Isabel Paehr and Diego Valverde
+								conceptualise and run interdisciplinary workshops at the intersection of media arts and
+								programming. Working in the fields of electronic arts, game design and machine learning, all
+								three share a passion for transdisciplinary learning and exchange. After spending time and
+								delightful pair programming sessions at the Recurse Center in NYC, they made the creation of
+								inclusive technical spaces their shared concern.
+							</p>
+							<a href="http://www.pleek.net" target="_blank"><p class="card-text"><small>www.pleek.net</small></p></a>
+						</div>
+					</div>
+					<div class="card card-bioFuzzy">
+						<img src="images/borders-symbol.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h3 class="card-title">Isabel Paehr</h3>
+							<p class="card-text">Isabel Paehr is involved in the production and arrangement of virtual matter.
+								She develops experimental games and material speculations, performs, writes and codes in
+								collaborative working groups. Paehr is 1/2 of the Berlin based game studio Topicbird. Since
+								September 2019, she works as a artistic researcher in the project Re:Coding Algorithmic Culture.
+							</p>
+							<a href="http://www.isabelpaehr.com/projects/" target="_blank"> <p class="card-text"><small>www.isabelpaehr.com</small></p></a>
+						</div>
+					</div>
+					<div class="card card-bioFuzzy">
+						<img src="images/borders-symbol.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h3 class="card-title">Diego Valverde Garros</h3>
+							<p class="card-text">As Fuzzy Binaires, Agustín Ramos Anzorena, Isabel Paehr and Diego Valverde
+								conceptualise and run interdisciplinary workshops at the intersection of media arts and
+								programming. Working in the fields of electronic arts, game design and machine learning, all
+								three share a passion for transdisciplinary learning and exchange. After spending time and
+								delightful pair programming sessions at the Recurse Center in NYC, they made the creation of
+								inclusive technical spaces their shared concern.
+							</p>
+							<a href="http://www.diego.net" target="_blank"><p class="card-text"><small>www.diego.net</small></p></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+
+	<script>
+
+		// SET BACKGROUND GRADIENT
+		var bodyTag = $("body");
+		var gradientSelect = "gradient-" + Math.floor((Math.random() * 2.9) + 1);
+		bodyTag.addClass(gradientSelect);
+
+	</script>
+
+</body>

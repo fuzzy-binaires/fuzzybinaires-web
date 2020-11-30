@@ -18,6 +18,9 @@ a:hover {
 #global-center {
 	width: 80%;
 }
+small{
+	font-size: 15px;
+}
 
 .container {
 	/* BOOSTRAP OVERRIDE */
@@ -90,7 +93,21 @@ a:hover {
 	width: 24vw;
 }
 
-#card-section {
+#whoFuzzy {
+	margin-top: 10px;
+	margin-bottom: 10vw;
+}
+
+#whoFuzzy p{
+	font-size: 17px;
+	font-weight: 200;
+	line-height: 2rem;
+	/* width: 24vw; */
+	margin-left: 20%;
+	padding: 0;
+}
+
+.card-section {
 	border: 1px solid white;
 	border-width: 1px 0 1px 0;
 }
@@ -105,7 +122,11 @@ a:hover {
 	border: none;
 	padding: 35px;
 	/* margin: 10px; */
-	min-width: fit-content;
+	/* min-width: fit-content; */
+}
+
+.card-bioFuzzy{
+	padding: 10px;
 }
 
 .card h3 {
@@ -129,10 +150,25 @@ a:hover {
 	.card {
 		text-align: center;
 	}
+
+	.card-bioFuzzy{
+		padding: 5px;
+		font-size: 14px;
+		text-align: left;
+	}
 	/* .card h3{
 		font-size: 3vw;
 	} */
 	.edition-image-fuzzy {
 		margin-bottom: 20px;
+	}
+
+	#whoFuzzy p{
+		font-size: 14px;
+		font-weight: 200;
+		line-height: 1.5rem;
+		/* width: 24vw; */
+		margin-left: 10%;
+		padding: 0;
 	}
 }
