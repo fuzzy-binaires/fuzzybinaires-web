@@ -90,21 +90,6 @@ a:hover {
 	width: 24vw;
 }
 
-@media only screen and (max-width: 800px) {
-	
-	#bigFuzzy h1 {
-		font-size: 10vw;
-		font-weight: 200;
-	}
-
-	#descriptionFuzzy h2{
-		font-size: 4.5vw;
-		font-weight: 200;
-		width: 50vw;
-	}
-
-}
-
 #card-section {
 	border: 1px solid white;
 	border-width: 1px 0 1px 0;
@@ -120,15 +105,34 @@ a:hover {
 	border: none;
 	padding: 35px;
 	/* margin: 10px; */
+	min-width: fit-content;
 }
 
 .card h3 {
-	font-size: 1.7vw;
+	font-size: 30px;
 }
 
 .edition-image-fuzzy {
-	/* max-width: 100%; */
-	/* width: 100px;
-	height: 100px;
-	margin: 10px; */
+	margin-right: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+	#bigFuzzy h1 {
+		font-size: 10vw;
+		font-weight: 200;
+	}
+	#descriptionFuzzy h2 {
+		font-size: 4.5vw;
+		font-weight: 200;
+		width: 50vw;
+	}
+	.card {
+		text-align: center;
+	}
+	/* .card h3{
+		font-size: 3vw;
+	} */
+	.edition-image-fuzzy {
+		margin-bottom: 20px;
+	}
 }
