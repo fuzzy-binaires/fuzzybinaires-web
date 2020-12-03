@@ -42,16 +42,16 @@
 
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="#">fuzzies</a>
+						<a class="nav-link" href="index.html">home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">motivation</a>
+						<a class="nav-link" href="who.html">fuzzies</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">editions</a>
+						<a class="nav-link" href="motivation.html">motivation</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">contact</a>
+						<a class="nav-link" href="contact.html">contact</a>
 					</li>
 				</ul>
 			</div>
@@ -69,6 +69,10 @@
 					<div class="card-group">
 
 						<div class="card">
+							<a href="https://hauptstadtkulturfonds.berlin.de/en/funded-projects/project/project_105"
+								target="_blank">
+								<div class="littleFlag">Funded by Berlin's<br><strong>Hauptstadtkulturfonds</strong></div>
+							</a>
 							<div class="row no-gutters" id="bordersButton">
 								<div class="col-auto">
 									<img src="images/borders-symbol.png" class="img-fluid edition-image-fuzzy" alt="">
@@ -78,7 +82,8 @@
 										<h3 class="card-title">B[ORDERS]</h3>
 										<p class="card-text">Online Programme
 											<br>
-											2020, July 26 > August 2</p>
+											2020, July 26 > August 2
+										</p>
 									</div>
 								</div>
 							</div>
@@ -116,12 +121,17 @@
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 
+						<!-- --- BORDERS --- -->
 						<div class="container vertical-center block-section">
 
 							<div class="row text-center">
 								<div class="col">
 
 									<h2>B[ORDERS]</h2>
+
+									<div class="block-image">
+										<img class="img-fluid" src="images/circuitboard.png">
+									</div>
 
 									<h3>PROGRAMME OVERVIEW</h3>
 
@@ -258,8 +268,10 @@
 											<a href="http://fuzzybinaires.org/borders/" target="_blank">
 												<li class="list-group-item">The Programme landing site</li>
 											</a>
-											<a href="https://hauptstadtkulturfonds.berlin.de/en/funded-projects/project/project_105" target="_blank">
-												<li class="list-group-item"> The Programme in the gallery of Funded Projects of <strong> Hauptstadtkulturfonds</strong>, Berlin's Capital Cultural Fund</li>
+											<a href="https://hauptstadtkulturfonds.berlin.de/en/funded-projects/project/project_105"
+												target="_blank">
+												<li class="list-group-item"> The Programme in the gallery of Funded Projects of
+													<strong> Hauptstadtkulturfonds</strong>, Berlin's Capital Cultural Fund</li>
 											</a>
 										</ul>
 										</p>
@@ -280,6 +292,10 @@
 								<div class="col">
 
 									<h2>CONNECTIONS</h2>
+
+									<div class="block-image">
+										<img class="img-fluid" src="images/connectionsGreen.png">
+									</div>
 
 									<h3>PROGRAMME OVERVIEW</h3>
 
@@ -416,18 +432,35 @@
 		var gradientSelect = "gradient-" + Math.floor((Math.random() * 2.9) + 1);
 		bodyTag.addClass(gradientSelect);
 
-		// CAROUSEL SETTINGS
-		$('#editionsCarousel').carousel('pause');
 
-		$("#bordersButton").click(function () {
-			$('#editionsCarousel').carousel(0);
+		$(document).ready(function () {
+
+			// CAROUSEL SETTINGS
 			$('#editionsCarousel').carousel('pause');
+
+			$("#bordersButton").click(function () {
+				$('#editionsCarousel').carousel(0);
+				$('#editionsCarousel').carousel('pause');
+			});
+
+			$("#connectionsButton").click(function () {
+				$('#editionsCarousel').carousel(1);
+				$('#editionsCarousel').carousel('pause');
+			});
+
+
+			window.setTimeout(function () {
+				// IF COMING FROM HOME, A NUMBER IS PASSED THROUGH THE URL TO GO DIRECTLY TO THE CAROUSELS SLIDE
+				var slideNumber = parseInt(window.location.hash.substring(1));
+				if (slideNumber != NaN) {
+					// console.log(slideNumber);
+					$('#editionsCarousel').carousel(slideNumber);
+					$('#editionsCarousel').carousel('pause');
+				}
+			}, 500);
 		});
 
-		$("#connectionsButton").click(function () {
-			$('#editionsCarousel').carousel(1);
-			$('#editionsCarousel').carousel('pause');
-		});
+
 
 
 

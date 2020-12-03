@@ -42,16 +42,16 @@
 
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="#">fuzzies</a>
+						<a class="nav-link" href="who.html">fuzzies</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">motivation</a>
+						<a class="nav-link" href="motivation.html">motivation</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">editions</a>
+						<a class="nav-link" href="editions.html">editions</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">contact</a>
+						<a class="nav-link" href="contact.html">contact</a>
 					</li>
 				</ul>
 			</div>
@@ -65,9 +65,13 @@
 			<div class="row text-center">
 				<!-- <div class="col" id="weAre">WE ARE</div> -->
 				<div class="col">
-					<div id="bigFuzzy"><h1>FUZZY BINAIRES</h1></div>
-					<div id="descriptionFuzzy"><h2>We conceptualise and run interdisciplinary workshops at the intersection of
-						media arts and computer programming.</h2></div>
+					<div id="bigFuzzy">
+						<h1>FUZZY BINAIRES</h1>
+					</div>
+					<div id="descriptionFuzzy">
+						<h2>We conceptualise and run interdisciplinary workshops at the intersection of
+							media arts and computer programming.</h2>
+					</div>
 				</div>
 			</div>
 
@@ -81,7 +85,11 @@
 				<div class="card-group block-section">
 
 					<div class="card">
-						<div class="row no-gutters">
+						<a href="https://hauptstadtkulturfonds.berlin.de/en/funded-projects/project/project_105"
+							target="_blank">
+							<div class="littleFlag">Funded by Berlin's<br><strong>Hauptstadtkulturfonds</strong></div>
+						</a>
+						<div class="row no-gutters" id="bordersButton">
 							<div class="col-auto">
 								<img src="images/borders-symbol.png" class="img-fluid edition-image-fuzzy" alt="">
 							</div>
@@ -97,7 +105,7 @@
 					</div>
 
 					<div class="card">
-						<div class="row no-gutters">
+						<div class="row no-gutters" id="connectionsButton">
 							<div class="col-auto">
 								<img src="images/connections-symbol.png" class="img-fluid edition-image-fuzzy" alt="">
 							</div>
@@ -129,6 +137,18 @@
 		var bodyTag = $("body");
 		var gradientSelect = "gradient-" + Math.floor((Math.random() * 2.9) + 1);
 		bodyTag.addClass(gradientSelect);
+
+		$(document).ready(function () {
+
+			$("#bordersButton").click(function () {
+				window.location.href = "editions.html#0";
+			});
+
+			$("#connectionsButton").click(function () {
+				window.location.href = "editions.html#1";
+			});
+		});
+
 
 	</script>
 
