@@ -149,6 +149,14 @@ small {
 	width: 80%;
 }
 
+#bordersButton{
+	cursor: progress;
+}
+
+#connectionsButton{
+	cursor: progress;
+}
+
 @media only screen and (max-width: 800px) {
 	#bigFuzzy h1 {
 		font-size: 10vw;
