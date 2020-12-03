@@ -18,7 +18,8 @@ a:hover {
 #global-center {
 	width: 80%;
 }
-small{
+
+small {
 	font-size: 15px;
 }
 
@@ -98,7 +99,7 @@ small{
 	margin-bottom: 10vw;
 }
 
-#whoFuzzy p{
+#whoFuzzy p {
 	font-size: 17px;
 	font-weight: 200;
 	line-height: 2rem;
@@ -107,7 +108,7 @@ small{
 	padding: 0;
 }
 
-.card-section {
+.block-section {
 	border: 1px solid white;
 	border-width: 1px 0 1px 0;
 }
@@ -125,7 +126,14 @@ small{
 	/* min-width: fit-content; */
 }
 
-.card-bioFuzzy{
+.list-group-item {
+	/* BOOSTRAP OVERRIDE */
+	background: none;
+	margin-left: 20%;
+	padding-left:0;
+}
+
+.card-bioFuzzy {
 	padding: 10px;
 }
 
@@ -135,6 +143,10 @@ small{
 
 .edition-image-fuzzy {
 	margin-right: 20px;
+}
+
+.profile-image-fuzzy {
+	width: 80%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -150,8 +162,7 @@ small{
 	.card {
 		text-align: center;
 	}
-
-	.card-bioFuzzy{
+	.card-bioFuzzy {
 		padding: 5px;
 		font-size: 14px;
 		text-align: left;
@@ -162,8 +173,7 @@ small{
 	.edition-image-fuzzy {
 		margin-bottom: 20px;
 	}
-
-	#whoFuzzy p{
+	#whoFuzzy p {
 		font-size: 14px;
 		font-weight: 200;
 		line-height: 1.5rem;
