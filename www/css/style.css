@@ -2,6 +2,13 @@
 	font-size: 17px;
 }
 
+@font-face{
+	font-family: "atkinson";
+	src: url("../fonts/woff/Atkinson-Hyperlegible-Regular-102.woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
 	font-family: 'Dosis', sans-serif;
 	color: white;
@@ -15,12 +22,50 @@ a:hover {
 	color: rgb(7, 172, 156);
 }
 
-#global-center {
-	width: 80%;
-}
 
 small {
 	font-size: 15px;
+}
+
+/* --- ACCESSIBILITY - BEGIN */
+
+#accessPanel{
+	position: fixed;
+	top: -123px;
+	left: 10px;
+	z-index: 9999;
+	font-family: "atkinson", sans-serif;
+	font-size: 20px;
+}
+
+.access-panelButton{
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	color: white;
+	background-color: black;
+	padding: 5px;
+
+	cursor: pointer;
+}
+
+#access-button{
+	color: black;
+	background-color: white;
+	border-width: 1px 0 5px 0;
+	font-size: 30px;
+	width: fit-content;
+	height: 50px;
+	
+	/* content: "👁‍🗨"; */
+	/* content: "\01F441"; */
+
+}
+
+
+/* --- ACCESSIBILITY - END */
+
+#global-center {
+	width: 80%;
 }
 
 .container {
@@ -70,6 +115,7 @@ small {
 .nav-item {
 	text-align: end;
 	padding: 10px;
+	/* background-color: rgba(255,255,255,0.5); */
 }
 
 #initial-screen-size {
@@ -94,17 +140,23 @@ small {
 	width: 24vw;
 }
 
-#whoFuzzy {
+.textBlockFuzzy {
 	margin-top: 10px;
 	margin-bottom: 10vw;
+	margin-left: 20%;
 }
 
-#whoFuzzy p {
+.textBlockFuzzy p {
 	font-size: 17px;
 	font-weight: 200;
 	line-height: 2rem;
-	/* width: 24vw; */
-	margin-left: 20%;
+	padding: 0;
+}
+
+.textBlockFuzzy-legible p {
+	font-family: "atkinson";
+	font-size: 20px;
+	line-height: 2rem;
 	padding: 0;
 }
 
@@ -133,7 +185,7 @@ small {
 .list-group-item {
 	/* BOOSTRAP OVERRIDE */
 	background: none;
-	margin-left: 20%;
+	/* margin-left: 20%; */
 	padding-left: 0;
 }
 
@@ -173,6 +225,11 @@ small {
 }
 
 @media only screen and (max-width: 800px) {
+	
+	.nav-item{
+		/* background-color: rgba(255,255,255,0.5); */
+	}
+	
 	#bigFuzzy h1 {
 		font-size: 10vw;
 		font-weight: 200;
@@ -196,7 +253,12 @@ small {
 	.edition-image-fuzzy {
 		margin-bottom: 20px;
 	}
-	#whoFuzzy p {
+
+	.textBlockFuzzy{
+		margin-left: 10%;
+	}
+
+	#textBlockFuzzy p {
 		font-size: 14px;
 		font-weight: 200;
 		line-height: 1.5rem;
