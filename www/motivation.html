@@ -31,12 +31,17 @@
 <body class="fullBack">
 
 	<div id="accessPanel">
-		<div class="access-panelButton" id="access-goToContent" tabindex="2" title="continue to content" aria-label="continue to content" role="text">CONTINUE TO
+		<div class="access-panelButton" id="access-goToContent" tabindex="2" title="continue to content"
+			aria-label="continue to content" role="text">CONTINUE TO
 			CONTENT</div>
-		<div class="access-panelButton" id="access-biggerFont" tabindex="3" title="increase font size" aria-label="increase font size" role="text">BIGGER FONT</div>
-		<div class="access-panelButton" id="access-changeContrast" tabindex="4" title="change color contrast" aria-label="change color contrast" role="text">CHANGE
+		<div class="access-panelButton" id="access-biggerFont" tabindex="3" title="increase font size"
+			aria-label="increase font size" role="text">BIGGER FONT</div>
+		<div class="access-panelButton" id="access-changeContrast" tabindex="4" title="change color contrast"
+			aria-label="change color contrast. End of Menu." role="text">CHANGE
 			CONTRAST</div>
-		<div class="access-panelButton" id="access-button" tabindex="1" href="#" title="to open accessibility panel, press enter" aria-label="to open the accessibility panel, press enter">👁‍🗨</div>
+		<div class="access-panelButton" id="access-button" tabindex="1" href="#"
+			title="to open accessibility panel, press enter" aria-label="to open the accessibility panel, press enter">
+			👁‍🗨</div>
 	</div>
 
 	<div class="container vertical-center" id="global-center">
@@ -193,6 +198,7 @@
 
 	</div>
 
+	<script src="js/accesibility.js" ></script>
 
 	<script>
 
@@ -201,46 +207,9 @@
 		var gradientSelect = "gradient-" + Math.floor((Math.random() * 2.9) + 1);
 		bodyTag.addClass(gradientSelect);
 
-		var accessPanelOpened = false;
+		// var accessPanelOpened = false;
+		// var fontSizeSelected = 0;
 
-		window.onload = function () {
-
-			// ACCES BUTTON --
-			var access = $("#access-button");
-
-			access.click(function () {
-				moveAccessibilityPanel();
-			});
-			access.keypress(function (e) {
-				if (e.which == 13) { // ENTER KEY (JQUERY SHOULD MAKE IT CONSISTENT ACCROSS BROWSERS)
-					moveAccessibilityPanel()
-				}
-			});
-
-			// GO TO CONTENT BUTTON --
-			var gotoContent = $("#access-goToContent");
-
-			gotoContent.click(function () {
-				location.href = "#motivation-title";
-				moveAccessibilityPanel();
-			});
-			gotoContent.keypress(function (e) {
-				if (e.which == 13) {
-					location.href = "#motivation-title";
-					moveAccessibilityPanel();
-				}
-			});
-
-
-		}
-
-		function moveAccessibilityPanel() {
-			let toPosition = $("#accessPanel").css("top") == "0px" ? "-123px" : "0px";
-
-			$("#accessPanel").animate({ top: toPosition }, 500, function () {
-				//callback to whichever fuzzyNeeds
-			});
-		}
 
 	</script>
 
