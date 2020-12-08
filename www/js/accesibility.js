@@ -61,12 +61,11 @@ function bindAccessibilityEvents() {
 	var changeContrast = $("#access-changeContrast");
 
 	changeContrast.click(function () {
-		// changeToLegibleFont();
-		// $("#firstMenuItem").focus();
+		changeBackgroundColor();
 	});
 	changeContrast.keypress(function (e) {
 		if (e.which == 13) {
-			// changeToLegibleFont();
+			changeBackgroundColor();
 		}
 	});
 }
@@ -94,4 +93,8 @@ function changeToLegibleFont() {
 
 
 	fontSizeSelected++;
+}
+
+function changeBackgroundColor() {
+	$("body").css("background", "rgb(0,45,208)");
 }

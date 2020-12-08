@@ -212,11 +212,11 @@ small {
 }
 
 #bordersButton {
-	cursor: crosshair;
+	cursor: pointer;
 }
 
 #connectionsButton {
-	cursor: crosshair;
+	cursor: pointer;
 }
 
 .littleFlag {
