@@ -5,7 +5,7 @@ window.onload = function () {
 	bindAccessibilityEvents();
 }
 
-function bindAccessibilityEvents(){
+function bindAccessibilityEvents() {
 	// ACCESS BUTTON --
 	var access = $("#access-button");
 
@@ -33,7 +33,19 @@ function bindAccessibilityEvents(){
 		}
 	});
 
-	// GO TO CONTENT BUTTON --
+	// GO TO MENU BUTTON --
+	var gotoMenu = $("#access-goToMenu");
+
+	gotoMenu.click(function () {
+		$("#firstMenuItem").focus();
+	});
+	gotoMenu.keypress(function (e) {
+		if (e.which == 13) {
+			$("#firstMenuItem").focus();
+		}
+	});
+
+	// BIGGER FONT BUTTON --
 	var biggerFont = $("#access-biggerFont");
 
 	biggerFont.click(function () {
@@ -44,13 +56,26 @@ function bindAccessibilityEvents(){
 			changeToLegibleFont();
 		}
 	});
+
+	// CONTRAST BUTTON --
+	var changeContrast = $("#access-changeContrast");
+
+	changeContrast.click(function () {
+		// changeToLegibleFont();
+		// $("#firstMenuItem").focus();
+	});
+	changeContrast.keypress(function (e) {
+		if (e.which == 13) {
+			// changeToLegibleFont();
+		}
+	});
 }
 
 
 
 function moveAccessibilityPanel() {
 
-	let toPosition = $("#accessPanel").css("top") == "0px" ? "-123px" : "0px";
+	let toPosition = $("#accessPanel").css("top") == "0px" ? "-165px" : "0px";
 
 	$("#accessPanel").animate({ top: toPosition }, 500, function () {
 		//callback to whichever fuzzyNeeds
