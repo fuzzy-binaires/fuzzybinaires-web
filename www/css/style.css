@@ -123,6 +123,13 @@ small {
 	color: rgb(184, 184, 184) !important;
 }
 
+#selectedMenuOption{
+	border-width: 1px 0px 0px 0px;
+	border-color: white;
+	border-style: solid;
+	
+}
+
 #initial-screen-size {
 	height: 50vh;
 }
