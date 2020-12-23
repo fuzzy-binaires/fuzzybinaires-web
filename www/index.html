@@ -101,26 +101,32 @@
 
 			<!-- EDITIONS CARDS -->
 			<div class="container vertical-center">
+				<h3 tabindex="0">EDITIONS</h3>
 
 				<div class="card-group block-section">
 
+
+
 					<div class="card">
-						<a href="https://hauptstadtkulturfonds.berlin.de/en/funded-projects/project/project_105"
-							target="_blank">
-							<div class="littleFlag">Funded by Berlin's<br><strong>Hauptstadtkulturfonds</strong></div>
-						</a>
-						<div class="row no-gutters" id="bordersButton">
+						<div class="row no-gutters">
 							<div class="col-auto">
 								<img src="images/borders-symbol.png" class="img-fluid edition-image-fuzzy" alt="">
 							</div>
-							<div class="col d-flex align-items-center">
-								<div class="card-block px-2">
+							<div class="col align-items-center">
+								<div class="card-block px-2" id="bordersButton">
 									<h3 class="card-title">B[ORDERS]</h3>
 									<p class="card-text">Online Programme
 										<br>
 										2020, July 26 > August 2
 									</p>
 								</div>
+								<div class="littleFlag">
+									<a	href="https://hauptstadtkulturfonds.berlin.de/en/funded-projects/project/project_105"
+										target="_blank">
+										Funded by Berlin's <strong>Hauptstadtkulturfonds !!</strong>
+									</a>
+								</div>
+
 							</div>
 						</div>
 					</div>
@@ -155,5 +161,20 @@
 
 	<script src="js/accesibility.js"></script>
 	<script src="js/scripting.js"></script>
+
+	<script>
+
+		$(document).ready(function () {
+
+			$("#bordersButton").click(function () {
+				window.location.href = "editions.html#0";
+			});
+
+			$("#connectionsButton").click(function () {
+				window.location.href = "editions.html#1";
+			});
+		});
+
+	</script>
 
 </body>

@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-	color: rgb(7, 172, 156);
+	color: rgb(199, 199, 199)
 }
 
 small {
@@ -219,22 +219,33 @@ small {
 }
 
 #bordersButton {
+}
+
+#bordersButton:hover{
 	cursor: pointer;
+	color: gray;
 }
 
 #connectionsButton {
 	cursor: pointer;
 }
 
+#connectionsButton:hover{
+	cursor: pointer;
+	color: gray;
+}
+
 .littleFlag {
 	border: 1px solid white;
-	position: absolute;
+	/* position: absolute; */
 	z-index: 1;
-	transform: translateX(-22px) rotate(-20deg);
+	/* transform: translateX(-22px) rotate(-20deg); */
 	border-width: 1px 0 1px 0;
-	background-color: rgba(202, 81, 68, 0.5);
+	background-color: black;
 	padding: 5px;
-	font-size: 14px;
+	font-size: 15px;
+	width: fit-content;
+	margin: 10px 0px 10px 5px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -255,7 +266,7 @@ small {
 	#descriptionFuzzy h2 {
 		font-size: 4.5vw;
 		font-weight: 200;
-		width: 50vw;
+		width: 70vw;
 	}
 	.card {
 		text-align: center;
