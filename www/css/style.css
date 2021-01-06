@@ -34,7 +34,7 @@ small {
 
 #accessPanel {
 	position: fixed;
-	top: -165px;
+	top: -206px;
 	left: 10px;
 	z-index: 9999;
 	font-family: "atkinson", sans-serif;
@@ -79,7 +79,7 @@ small {
 }
 
 .fullBack {
-	background: black;
+	background-color: rgb(0,45,208);
 }
 
 .gradient-1 {

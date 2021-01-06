@@ -38,16 +38,18 @@
 
 	<div id="accessPanel">
 		<div class="access-panelButton" id="access-goToContent" tabindex="2" title="continue to content"
-			aria-label="continue to content" role="text">GO TO CONTENT</div>
+			aria-label="continue to content" role="text" data-jumpTo="motivation-title">GO TO CONTENT</div>
 		<div class="access-panelButton" id="access-goToMenu" tabindex="3" title="continue to menu"
 			aria-label="continue to menu" role="text">GO TO MENU</div>
 		<div class="access-panelButton" id="access-biggerFont" tabindex="4" title="increase font size"
 			aria-label="increase font size" role="text">BIGGER FONT</div>
 		<div class="access-panelButton" id="access-changeContrast" tabindex="5" title="change color contrast"
-			aria-label="change color contrast. End of Menu." role="text">CHANGE
+			aria-label="change color contrast." role="text">CHANGE
 			CONTRAST</div>
+		<div class="access-panelButton" id="access-resetAccessibility" tabindex="6" title="reset all accessibility options"
+			aria-label="reset all accessibility options. End of Menu." role="text">RESET VIEW</div>
 		<div class="access-panelButton" id="access-button" tabindex="1" href="#"
-			title="to open accessibility panel, press enter" aria-label="to open the accessibility panel, press enter">
+			title="accessibility panel, press enter to open or close" aria-label="accessibility panel, press enter to open or close">
 			👁‍🗨 ACCESSIBILITY</div>
 	</div>
 
@@ -66,18 +68,18 @@
 						<a class="nav-link" href="index.html" id="firstMenuItem" tabindex="0">home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="motivation.html">
+						<a class="nav-link" href="motivation.html" tabindex="0">
 							<div id="selectedMenuOption">motivation</div>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="who.html">fuzzies</a>
+						<a class="nav-link" href="who.html" tabindex="0">fuzzies</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="editions.html">editions</a>
+						<a class="nav-link" href="editions.html" tabindex="0">editions</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="contact.html">contact</a>
+						<a class="nav-link" href="contact.html" tabindex="0">contact</a>
 					</li>
 				</ul>
 			</div>
@@ -161,8 +163,8 @@
 
 						<h3 tabindex="0">GENERAL OBJECTIVES</h3>
 
-						<div class="textBlockFuzzy" tabindex="0">
-							<p>
+						<div class="textBlockFuzzy">
+							<p tabindex="0">
 								While each Fuzzy Binaires workshop week has its own theme, there are a few objectives that we put into practice
 								in all proposed workshops and events:
 							</p>
@@ -171,14 +173,14 @@
 
 							<p>
 							<ul class="list-group list-group-flush">
-								<li class="list-group-item">Learning the basics in software programming, prototyping,
+								<li class="list-group-item" tabindex="0">Learning the basics in software programming, prototyping,
 									design, critical theory.</li>
-								<li class="list-group-item">Developing an end-of-program production or
+								<li class="list-group-item" tabindex="0">Developing an end-of-program production or
 									exhibition. This includes
 									brainstorming sessions, sketching, technical research, storytelling, and design.</li>
-								<li class="list-group-item">Structured discussions and exchanges in regard to the
+								<li class="list-group-item" tabindex="0">Structured discussions and exchanges in regard to the
 									selected theme. We organize reading sessions of selected theoretical texts.</li>
-								<li class="list-group-item">We foster group dynamics through e. g. improvisations, stretching, cooking
+								<li class="list-group-item" tabindex="0">We foster group dynamics through e. g. improvisations, stretching, cooking
 									sessions etc.</li>
 							</ul>
 							</p>

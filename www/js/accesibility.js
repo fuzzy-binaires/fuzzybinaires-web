@@ -1,8 +1,36 @@
 
 var fontSizeSelected = 0;
+var contrastOn = 0;
 
 window.onload = function () {
+
+
+	// ACCESSIBILITY - BEGIN
+
 	bindAccessibilityEvents();
+
+	resetAccesibilityParameters();
+
+	// PARSE VARS IN URL HASH
+	var stateVars = window.location.hash.substring(1).split(",");
+	changeToLegibleFont(parseInt(stateVars[0]));
+	changeBackgroundColor(parseInt(stateVars[1]));
+
+	// ACCESSIBILITY - END
+
+
+}
+
+function resetAccesibilityParameters() {
+	fontSizeSelected = 3; // 3 = NO LEGIBILITY CHANGE
+	contrastOn = 0; // GRADIENT BACKGROUND
+}
+
+function resetAccessibilityMode() {
+	resetAccesibilityParameters();
+
+	changeToLegibleFont(fontSizeSelected);
+	changeBackgroundColor(contrastOn);
 }
 
 function bindAccessibilityEvents() {
@@ -23,12 +51,15 @@ function bindAccessibilityEvents() {
 	var gotoContent = $("#access-goToContent");
 
 	gotoContent.click(function () {
-		location.href = "#motivation-title";
+		let idString = "#" + $(this).attr("data-jumpTo");
+		$(idString).focus();
+		// console.log($(":focus").html());
 		moveAccessibilityPanel();
 	});
 	gotoContent.keypress(function (e) {
 		if (e.which == 13) {
-			location.href = "#motivation-title";
+			let idString = "#" + $(this).attr("data-jumpTo");
+			$(idString).focus();
 			moveAccessibilityPanel();
 		}
 	});
@@ -38,10 +69,13 @@ function bindAccessibilityEvents() {
 
 	gotoMenu.click(function () {
 		$("#firstMenuItem").focus();
+
+		moveAccessibilityPanel();
 	});
 	gotoMenu.keypress(function (e) {
 		if (e.which == 13) {
 			$("#firstMenuItem").focus();
+			moveAccessibilityPanel();
 		}
 	});
 
@@ -49,11 +83,14 @@ function bindAccessibilityEvents() {
 	var biggerFont = $("#access-biggerFont");
 
 	biggerFont.click(function () {
-		changeToLegibleFont();
+		fontSizeSelected = (fontSizeSelected + 1) % 3;
+		changeToLegibleFont(fontSizeSelected);
+
 	});
 	biggerFont.keypress(function (e) {
 		if (e.which == 13) {
-			changeToLegibleFont();
+			fontSizeSelected = (fontSizeSelected + 1) % 3;
+			changeToLegibleFont(fontSizeSelected);
 		}
 	});
 
@@ -61,11 +98,23 @@ function bindAccessibilityEvents() {
 	var changeContrast = $("#access-changeContrast");
 
 	changeContrast.click(function () {
-		changeBackgroundColor();
+		changeBackgroundColor((contrastOn + 1) % 2);
 	});
 	changeContrast.keypress(function (e) {
 		if (e.which == 13) {
-			changeBackgroundColor();
+			changeBackgroundColor((contrastOn + 1) % 2);
+		}
+	});
+
+	// RESET ACCESSIBILITY BUTTON --
+	var resetAccess = $("#access-resetAccessibility");
+
+	resetAccess.click(function () {
+		resetAccessibilityMode();
+	});
+	resetAccess.keypress(function (e) {
+		if (e.which == 13) {
+			resetAccessibilityMode();
 		}
 	});
 }
@@ -74,27 +123,48 @@ function bindAccessibilityEvents() {
 
 function moveAccessibilityPanel() {
 
-	let toPosition = $("#accessPanel").css("top") == "0px" ? "-165px" : "0px";
+	let toPosition = $("#accessPanel").css("top") == "0px" ? "-206px" : "0px";
 
 	$("#accessPanel").animate({ top: toPosition }, 500, function () {
 		//callback to whichever fuzzyNeeds
 	});
 }
 
-function changeToLegibleFont() {
+function changeToLegibleFont(state) {
 
-	let fontSizes = ["25px", "30px", "40px"];
+	if (state != 3 && !isNaN(state)) { // 3 = NO LEGIBILITY CHANGE
 
-	$(".textBlockFuzzy").addClass("textBlockFuzzy-legible");
-	$(".textBlockFuzzy").find("p").css("font-size", fontSizes[fontSizeSelected % fontSizes.length]);
+		fontSizeSelected = state;
 
-	$("li").addClass("textBlockFuzzy-legible");
-	$("li").css("font-size", fontSizes[fontSizeSelected % fontSizes.length]);
+		let fontSizes = ["25px", "30px", "40px"];
 
+		$(".textBlockFuzzy").addClass("textBlockFuzzy-legible");
+		$(".textBlockFuzzy").find("p").css("font-size", fontSizes[state]);
 
-	fontSizeSelected++;
+		$("li").addClass("textBlockFuzzy-legible");
+		$("li").css("font-size", fontSizes[state]);
+	} else {
+		$(".textBlockFuzzy").removeClass("textBlockFuzzy-legible");
+		$(".textBlockFuzzy").find("p").css("font-size", 17);
+
+		$("li").removeClass("textBlockFuzzy-legible");
+		$("li").css("font-size", 17);
+
+	}
 }
 
-function changeBackgroundColor() {
-	$("body").css("background", "rgb(0,45,208)");
+function changeBackgroundColor(state) {
+	var bodyTag = $("body");
+	bodyTag.removeClass(); // remove all classes;
+
+	if (state == 0 || isNaN(state)) {
+		var gradientSelect = "gradient-" + Math.floor((Math.random() * 2.99) + 1);
+		bodyTag.addClass(gradientSelect);
+		contrastOn = 0;
+	} else {
+		bodyTag.addClass("fullBack");
+		// $("body").css("background", "rgb(0,45,208)");
+		contrastOn = state;
+	}
+
 }

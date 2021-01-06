@@ -1,8 +1,21 @@
 
 // SET BACKGROUND GRADIENT
-var bodyTag = $("body");
-var gradientSelect = "gradient-" + Math.floor((Math.random() * 2.9) + 1);
-bodyTag.addClass(gradientSelect);
+// var bodyTag = $("body");
+// var gradientSelect = "gradient-" + Math.floor((Math.random() * 2.9) + 1);
+// bodyTag.addClass(gradientSelect);
+
+// INTERCEPT ALL a LINKS WITH THIS EVENT BIND.
+// THE LINKS TO editions HANDLE THIS WITH THEIR OWN onClick, CUZ il ajoutent 1 variable en plus
+$( document ).on( "click", "a", function(event) {
+	event.preventDefault	();
+
+	let linkTo = $(this).attr("href");
+
+	var accessibilityVars = [fontSizeSelected,contrastOn];
+
+	relayLink(linkTo, accessibilityVars);
+
+ });
 
 
 window.onscroll = function () {
@@ -26,4 +39,11 @@ window.onscroll = function () {
 
 function mathClamp(value, min, max) {
 	return Math.min(Math.max(min, value), max)
+}
+
+function relayLink(addresse, stateVars){
+
+	// ADDING VARS AS HASH DATA IN URL
+	window.location.href = addresse+"#"+stateVars;
+
 }

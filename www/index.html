@@ -38,16 +38,18 @@
 
 	<div id="accessPanel">
 		<div class="access-panelButton" id="access-goToContent" tabindex="2" title="continue to content"
-			aria-label="continue to content" role="text">GO TO CONTENT</div>
+			aria-label="continue to content" role="text" data-jumpTo="bigFuzzy">GO TO CONTENT</div>
 		<div class="access-panelButton" id="access-goToMenu" tabindex="3" title="continue to menu"
 			aria-label="continue to menu" role="text">GO TO MENU</div>
 		<div class="access-panelButton" id="access-biggerFont" tabindex="4" title="increase font size"
 			aria-label="increase font size" role="text">BIGGER FONT</div>
 		<div class="access-panelButton" id="access-changeContrast" tabindex="5" title="change color contrast"
-			aria-label="change color contrast. End of Menu." role="text">CHANGE
+			aria-label="change color contrast." role="text">CHANGE
 			CONTRAST</div>
+		<div class="access-panelButton" id="access-resetAccessibility" tabindex="6" title="reset all accessibility options"
+			aria-label="reset all accessibility options. End of Menu." role="text">RESET VIEW</div>
 		<div class="access-panelButton" id="access-button" tabindex="1" href="#"
-			title="to open accessibility panel, press enter" aria-label="to open the accessibility panel, press enter">
+			title="accessibility panel, press enter to open or close" aria-label="accessibility panel, press enter to open or close">
 			👁‍🗨 ACCESSIBILITY</div>
 	</div>
 
@@ -64,19 +66,20 @@
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
 						<a class="nav-link" href="index.html" id="firstMenuItem" tabindex="0">
-							<div id="selectedMenuOption">home</div></a>
+							<div id="selectedMenuOption">home</div>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="motivation.html">motivation</a>
+						<a class="nav-link" href="motivation.html" tabindex="0">motivation</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="who.html">fuzzies</a>
+						<a class="nav-link" href="who.html" tabindex="0">fuzzies</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="editions.html">editions</a>
+						<a class="nav-link" href="editions.html" tabindex="0">editions</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="contact.html">contact</a>
+						<a class="nav-link" href="contact.html" tabindex="0">contact</a>
 					</li>
 				</ul>
 			</div>
@@ -90,11 +93,11 @@
 			<div class="row text-center">
 				<!-- <div class="col" id="weAre">WE ARE</div> -->
 				<div class="col">
-					<div id="bigFuzzy">
+					<div id="bigFuzzy" tabindex="0">
 						<h1>FUZZY BINAIRES</h1>
 					</div>
 					<div id="descriptionFuzzy">
-						<h2>We conceptualise and run interdisciplinary workshops at the intersection of
+						<h2 tabindex="0">We conceptualise and run interdisciplinary workshops at the intersection of
 							media arts and computer programming.</h2>
 					</div>
 				</div>
@@ -106,7 +109,7 @@
 
 			<!-- EDITIONS CARDS -->
 			<div class="container vertical-center">
-				<h3>EDITIONS</h3>
+				<h3 tabindex="0">EDITIONS</h3>
 
 				<div class="card-group block-section">
 
@@ -115,19 +118,20 @@
 					<div class="card">
 						<div class="row no-gutters">
 							<div class="col-auto">
-								<img src="images/borders-symbol.png" class="img-fluid edition-image-fuzzy" alt="Fine line graphic displaying two abstract interlinked circles creating a form that looks like the number eight.">
+								<img src="images/borders-symbol.png" class="img-fluid edition-image-fuzzy" tabindex="0"
+									alt="Edition 1 of 2: Fine line graphic displaying two abstract interlinked circles creating a form that looks like the number eight.">
 							</div>
 							<div class="col align-items-center">
 								<div class="card-block px-2" id="bordersButton">
-									<h3 class="card-title">B[ORDERS]</h3>
-									<p class="card-text">Online Programme
+									<h3 class="card-title" tabindex="0">B[ORDERS]</h3>
+									<p class="card-text" tabindex="0">Online Programme
 										<br>
 										2020, July 26 > August 2
 									</p>
 								</div>
 								<div class="littleFlag">
 									<a href="https://hauptstadtkulturfonds.berlin.de/en/funded-projects/project/project_105"
-										target="_blank">
+										target="_blank" tabindex="0">
 										Funded by Berlin's <strong>Hauptstadtkulturfonds</strong>
 									</a>
 								</div>
@@ -139,12 +143,13 @@
 					<div class="card">
 						<div class="row no-gutters" id="connectionsButton">
 							<div class="col-auto">
-								<img src="images/connections-symbol.png" class="img-fluid edition-image-fuzzy" alt="Fine line graphic displaying two interlinked rectangular shapes. Two connecting lines reach one another, while one is disconnected.">
+								<img src="images/connections-symbol.png" class="img-fluid edition-image-fuzzy" tabindex="0"
+									alt="Edition 2 of 2: Fine line graphic displaying two interlinked rectangular shapes. Two connecting lines reach one another, while one is disconnected.">
 							</div>
 							<div class="col d-flex align-items-center">
 								<div class="card-block px-2">
-									<h3 class="card-title">CONNECTIONS</h3>
-									<p class="card-text">Munich, Germany
+									<h3 class="card-title" tabindex="0">CONNECTIONS</h3>
+									<p class="card-text" tabindex="0">Munich, Germany
 										<br>
 										2019, August 26 > September 01
 									</p>
@@ -172,11 +177,15 @@
 		$(document).ready(function () {
 
 			$("#bordersButton").click(function () {
-				window.location.href = "editions.html#0";
+				var vars = [fontSizeSelected, contrastOn, 0];
+				var linkTo = "editions.html";
+				relayLink(linkTo, vars);
 			});
 
 			$("#connectionsButton").click(function () {
-				window.location.href = "editions.html#1";
+				var vars = [fontSizeSelected, contrastOn, 1];
+				var linkTo = "editions.html";
+				relayLink(linkTo, vars);
 			});
 		});
 
