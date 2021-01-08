@@ -38,7 +38,7 @@
 
 	<div id="accessPanel">
 		<div class="access-panelButton" id="access-goToContent" tabindex="2" title="continue to content"
-			aria-label="continue to content" role="text">GO TO CONTENT</div>
+			aria-label="continue to content" role="text" data-jumpTo="contact-title">GO TO CONTENT</div>
 		<div class="access-panelButton" id="access-goToMenu" tabindex="3" title="continue to menu"
 			aria-label="continue to menu" role="text">GO TO MENU</div>
 		<div class="access-panelButton" id="access-biggerFont" tabindex="4" title="increase font size"
@@ -49,7 +49,7 @@
 		<div class="access-panelButton" id="access-resetAccessibility" tabindex="6" title="reset all accessibility options"
 			aria-label="reset all accessibility options. End of Menu." role="text">RESET VIEW</div>
 		<div class="access-panelButton" id="access-button" tabindex="1" href="#"
-			title="open or close accessibility panel, press enter" aria-label="open or close the accessibility panel, press enter">
+			title="accessibility panel, press enter to open or close" aria-label="accessibility panel, press enter to open or close">
 			👁‍🗨 ACCESSIBILITY</div>
 	</div>
 
@@ -68,16 +68,16 @@
 						<a class="nav-link" href="index.html" id="firstMenuItem" tabindex="0">home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="motivation.html">motivation</a>
+						<a class="nav-link" href="motivation.html" tabindex="0">motivation</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="who.html">fuzzies</a>
+						<a class="nav-link" href="who.html" tabindex="0">fuzzies</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="editions.html">editions</a>
+						<a class="nav-link" href="editions.html" tabindex="0">editions</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="contact.html">
+						<a class="nav-link" href="contact.html" tabindex="0">
 							<div id="selectedMenuOption">contact</div>
 						</a>
 					</li>
@@ -93,17 +93,17 @@
 			<div class="row text-center">
 				<!-- <div class="col" id="weAre">WE ARE</div> -->
 				<div class="col">
-					<h3 id="motivation-title" tabindex="0">CONTACT</h3>
+					<h3 id="contact-title" tabindex="0">CONTACT INFO</h3>
 					<div class="textBlockFuzzy" tabindex="0">
 						<p>Please do not hesitate to write or talk to us via:
 						</p>
 
 						<ul class="list-group list-group-flush">
-							<a href="mailto:fuzzybinaires@gmail.com">
+							<a href="mailto:fuzzybinaires@gmail.com"  tabindex="0">
 								<li class="list-group-item">fuzzybinaires@gmail.com</li>
 							</a>
-							<li class="list-group-item">France: +33 7 49 40 36 48</li>
-							<li class="list-group-item">Germany: </li>
+							<li class="list-group-item" tabindex="0">France: +33 7 49 40 36 48</li>
+							<li class="list-group-item" tabindex="0">Germany: </li>
 						</ul>
 						<br>
 						<ul class="list-group list-group-flush">

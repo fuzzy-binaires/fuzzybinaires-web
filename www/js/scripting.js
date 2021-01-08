@@ -5,7 +5,7 @@
 // bodyTag.addClass(gradientSelect);
 
 // INTERCEPT ALL a LINKS WITH THIS EVENT BIND.
-// THE LINKS TO editions HANDLE THIS WITH THEIR OWN onClick, CUZ il ajoutent 1 variable en plus
+// THE LINKS TO editions HANDLE THIS WITH THEIR OWN onClick, CUZ ils ajoutent 1 variable en plus
 $( document ).on( "click", "a", function(event) {
 	event.preventDefault	();
 

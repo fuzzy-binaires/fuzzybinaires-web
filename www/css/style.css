@@ -240,6 +240,10 @@ h3 span {
 	width: 80%;
 }
 
+.editions-submenu{
+	cursor: pointer;
+}
+
 #bordersButton {}
 
 #bordersButton:hover {
