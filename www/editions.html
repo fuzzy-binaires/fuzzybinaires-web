@@ -385,8 +385,10 @@
 
 									<ul>
 										<li class="editions-submenu" id="subMenu-connections-overview" tabindex="0">OVERVIEW</li>
-										<li class="editions-submenu" id="subMenu-connections-venue"tabindex="0">THE VENUE</a></li>
-										<li class="editions-submenu" id="subMenu-connections-documentation" tabindex="0">DOCUMENTATION</a></li>
+										<li class="editions-submenu" id="subMenu-connections-venue" tabindex="0">THE VENUE</a>
+										</li>
+										<li class="editions-submenu" id="subMenu-connections-documentation" tabindex="0">
+											DOCUMENTATION</a></li>
 										<li class="editions-submenu" id="subMenu-connections-images" tabindex="0">IMAGES</a></li>
 									</ul>
 
@@ -551,6 +553,13 @@
 
 	<script>
 
+		function getElementLeftTop(el) {
+			const rect = el.getBoundingClientRect();
+			return {
+				left: rect.left + window.scrollX,
+				top: rect.top + window.scrollY
+			};
+		}
 
 		$(document).ready(function () {
 
@@ -562,8 +571,10 @@
 				$('#editionsCarousel').carousel(0);
 				$('#editionsCarousel').carousel('pause');
 
+				// ON MOBILE, AUTOMATICALLY SCROLL THE WINDOW DOWNWARDS TO BE ABLE TO VIEW THE SELECTION EDITION
 				if ($(window).width() < 768) {
-					$("#overview").animate({ scrollTop: "0" }, 500); // NOT WORKING..!!
+					let bordersTitleScrollPos = getElementLeftTop($("#subMenu-borders-overview").get(0));
+					$("html, body").animate({ scrollTop: bordersTitleScrollPos.top - 150 }, 1000); // NOT WORKING..!!
 				}
 
 			});
@@ -571,6 +582,13 @@
 			$("#connectionsButton").click(function () {
 				$('#editionsCarousel').carousel(1);
 				$('#editionsCarousel').carousel('pause');
+
+				// ON MOBILE, AUTOMATICALLY SCROLL THE WINDOW DOWNWARDS TO BE ABLE TO VIEW THE SELECTION EDITION
+				if ($(window).width() < 768) {
+					let connectionsTitleScrollPos = getElementLeftTop($("#subMenu-connections-overview").get(0));
+					$("html, body").animate({ scrollTop: connectionsTitleScrollPos.top - 150 }, 1000); // NOT WORKING..!!
+				}
+
 			});
 
 
@@ -585,48 +603,43 @@
 			}, 500);
 		});
 
+		// ----
 		// THE GLOBAL LINK-RELAY SET ON scripting.js, TO ADD ACCESSIBILITY VAR STATE ACCROSS THE SITE, FUCKS UP THE "#" ANCHOR LINKS 
 		// EDITIONS SUBMENU RELIES ON THIS TYPE OF LINK......SO, THIS OVERRIDES THE GLOBAL ACCESSIBILITY BEHAVIOUR
 
 		// BORDERS SUB-MENU
-		$("#subMenu-borders-overview").click(function(){
+		$("#subMenu-borders-overview").click(function () {
 			$("#overviewBorders").focus();
 		});
 
-		$("#subMenu-borders-theme").click(function(){
+		$("#subMenu-borders-theme").click(function () {
 			$("#theme").focus();
 		});
 
-		$("#subMenu-borders-production").click(function(){
+		$("#subMenu-borders-production").click(function () {
 			$("#production").focus();
 		});
 
-		$("#subMenu-borders-images").click(function(){
+		$("#subMenu-borders-images").click(function () {
 			$("#imagesBorders").focus();
 		});
 
 		// CONNECTIONS SUB-MENU
-		$("#subMenu-connections-overview").click(function(){
+		$("#subMenu-connections-overview").click(function () {
 			$("#overviewConnections").focus();
 		});
 
-		$("#subMenu-connections-venue").click(function(){
+		$("#subMenu-connections-venue").click(function () {
 			$("#venue").focus();
 		});
 
-		$("#subMenu-connections-documentation").click(function(){
+		$("#subMenu-connections-documentation").click(function () {
 			$("#documentation").focus();
 		});
 
-		$("#subMenu-connections-images").click(function(){
+		$("#subMenu-connections-images").click(function () {
 			$("#imagesConnections").focus();
 		});
-		// <li class="editions-submenu" id="subMenu-connections-overview" tabindex="0">OVERVIEW</li>
-		// 								<li class="editions-submenu" id="subMenu-connections-venue"tabindex="0">THE VENUE</a></li>
-		// 								<li class="editions-submenu" id="subMenu-connections-documentation" tabindex="0">DOCUMENTATION</a></li>
-		// 								<li class="editions-submenu" id="subMenu-connections-images" tabindex="0">IMAGES</a></li>
-
-
 
 	</script>
 
