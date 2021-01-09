@@ -273,6 +273,15 @@ h3 span {
 	margin: 10px 0px 10px 5px;
 }
 
+.text-muted{
+	/* BOOSTRAP OVERRIDE */
+	color: rgb(220,220,220)!important;
+}
+
+.interested-card{
+	padding: 10px;
+}
+
 @media only screen and (max-width: 800px) {
 	.nav-item {
 		width: 50%;

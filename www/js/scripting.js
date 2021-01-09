@@ -6,16 +6,19 @@
 
 // INTERCEPT ALL a LINKS WITH THIS EVENT BIND.
 // THE LINKS TO editions HANDLE THIS WITH THEIR OWN onClick, CUZ ils ajoutent 1 variable en plus
-$( document ).on( "click", "a", function(event) {
-	event.preventDefault	();
+$(document).on("click", "a", function (event) {
 
 	let linkTo = $(this).attr("href");
 
-	var accessibilityVars = [fontSizeSelected,contrastOn];
+	// BUT IF LINK IS EXTERNAL/ABSOLUTE (AKA STARTS WITH http), LET IT DO IT'S THING. YES, I KNOW.. VERY CLEAN.. GNAGNAGNA!!
+	if (linkTo.substring(0,4) != "http") {
+		event.preventDefault();
+		var accessibilityVars = [fontSizeSelected, contrastOn];
 
-	relayLink(linkTo, accessibilityVars);
+		relayLink(linkTo, accessibilityVars);
+	}
 
- });
+});
 
 
 window.onscroll = function () {
@@ -41,9 +44,9 @@ function mathClamp(value, min, max) {
 	return Math.min(Math.max(min, value), max)
 }
 
-function relayLink(addresse, stateVars){
+function relayLink(addresse, stateVars) {
 
 	// ADDING VARS AS HASH DATA IN URL
-	window.location.href = addresse+"#"+stateVars;
+	window.location.href = addresse + "#" + stateVars;
 
 }
