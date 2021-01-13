@@ -143,6 +143,9 @@ function changeToLegibleFont(state) {
 
 		$("li").addClass("textBlockFuzzy-legible");
 		$("li").css("font-size", fontSizes[state]);
+
+		// TODO: ADD THIS FONT CHANGE TO MINI-BIO DIVS
+		
 	} else {
 		$(".textBlockFuzzy").removeClass("textBlockFuzzy-legible");
 		$(".textBlockFuzzy").find("p").css("font-size", 17);

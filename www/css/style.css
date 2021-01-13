@@ -238,6 +238,7 @@ h3 span {
 
 .profile-image-fuzzy {
 	width: 80%;
+	border-radius: 50% !important;
 }
 
 .editions-submenu{
