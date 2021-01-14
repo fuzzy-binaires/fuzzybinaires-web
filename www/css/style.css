@@ -246,8 +246,15 @@ h3 span {
 }
 
 .editions-submenu{
+	color: white;
 	cursor: pointer;
+	text-decoration: underline;
 }
+
+.editions-submenu:hover{
+	color: black;
+}
+
 
 #bordersButton {}
 

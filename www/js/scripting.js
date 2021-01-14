@@ -11,7 +11,8 @@ $(document).on("click", "a", function (event) {
 	let linkTo = $(this).attr("href");
 
 	// BUT IF LINK IS EXTERNAL/ABSOLUTE (AKA STARTS WITH http), LET IT DO IT'S THING. YES, I KNOW.. VERY CLEAN.. GNAGNAGNA!!
-	if (linkTo.substring(0,4) != "http") {
+	let linkHead = linkTo.substring(0,4);
+	if (linkHead != "http" && linkHead != "mail") {
 		event.preventDefault();
 		var accessibilityVars = [fontSizeSelected, contrastOn];
 
