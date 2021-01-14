@@ -16,6 +16,8 @@ body {
 
 a {
 	color: white;
+	text-decoration: underline;
+
 }
 
 a:hover {
@@ -269,11 +271,16 @@ h3 span {
 	z-index: 1;
 	/* transform: translateX(-22px) rotate(-20deg); */
 	border-width: 1px 0 1px 0;
+	color: white;
 	background-color: black;
 	padding: 5px;
 	font-size: 15px;
 	width: fit-content;
 	margin: 10px 0px 10px 5px;
+}
+
+.littleFlag > a:hover{
+	color: coral;
 }
 
 .text-muted{
