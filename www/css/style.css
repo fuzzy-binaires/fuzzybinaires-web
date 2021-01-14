@@ -19,7 +19,8 @@ a {
 }
 
 a:hover {
-	color: rgb(199, 199, 199)
+	/* color: rgb(199, 199, 199) */
+	color: black;
 }
 
 li {
@@ -124,7 +125,8 @@ small {
 
 .nav-link:hover {
 	/* BOOSTRAP OVERRIDE */
-	color: rgb(184, 184, 184) !important;
+	/* color: rgb(184, 184, 184) !important; */
+	color: black !important;
 }
 
 #selectedMenuOption {
@@ -249,7 +251,7 @@ h3 span {
 
 #bordersButton:hover {
 	cursor: pointer;
-	color: gray;
+	color: black;
 }
 
 #connectionsButton {
@@ -258,7 +260,7 @@ h3 span {
 
 #connectionsButton:hover {
 	cursor: pointer;
-	color: gray;
+	color: black;
 }
 
 .littleFlag {
