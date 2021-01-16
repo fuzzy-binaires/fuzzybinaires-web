@@ -14,7 +14,7 @@ window.onload = function () {
 	changeToLegibleFont(parseInt(stateVars[0]));
 	changeBackgroundColor(parseInt(stateVars[1]));
 
-
+	
 }
 
 function resetAccesibilityParameters() {
