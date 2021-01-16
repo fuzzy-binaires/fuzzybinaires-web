@@ -17,7 +17,6 @@ body {
 a {
 	color: white;
 	text-decoration: underline;
-
 }
 
 a:hover {
@@ -82,7 +81,7 @@ small {
 }
 
 .fullBack {
-	background-color: rgb(0,45,208);
+	background-color: rgb(0, 45, 208);
 }
 
 .gradient-1 {
@@ -110,7 +109,7 @@ small {
 	background: none;
 	border-width: 0 0 1px 0;
 	border-color: white;
-	height: 62px;
+	/* height: 62px; NOT SPECIFYING HEIGHT MAKES THE MENU PUSH THE CONTENT ON MOBILE*/
 	border-style: solid;
 }
 
@@ -138,7 +137,8 @@ small {
 }
 
 #initial-screen-size {
-	height: 50vh;
+	/* height: 50vh; */
+	margin-bottom: 100px;
 }
 
 #weAre {
@@ -154,9 +154,9 @@ small {
 }
 
 #descriptionFuzzy h2 {
-	font-size: 1.5vw;
+	font-size: 1.6vw;
 	font-weight: 200;
-	width: 24vw;
+	width: 38vw;
 }
 
 .textBlockFuzzy {
@@ -177,6 +177,11 @@ small {
 	font-size: 25px;
 	line-height: 3rem;
 	/* padding: 0; */
+}
+
+.nav-legible{
+	font-size: 25px !important;
+	margin-top: 30px !important;
 }
 
 .block-section {
@@ -212,6 +217,10 @@ small {
 	/* min-width: fit-content; */
 }
 
+.card-title {
+	/* BOOSTRAP OVERRIDE */
+}
+
 .list-group-item {
 	/* BOOSTRAP OVERRIDE */
 	background: none;
@@ -221,6 +230,7 @@ small {
 
 .card-bioFuzzy {
 	padding: 10px;
+	margin-top: 30px;
 }
 
 .card h3 {
@@ -245,16 +255,15 @@ h3 span {
 	border-radius: 50% !important;
 }
 
-.editions-submenu{
+.editions-submenu {
 	color: white;
 	cursor: pointer;
 	text-decoration: underline;
 }
 
-.editions-submenu:hover{
+.editions-submenu:hover {
 	color: black;
 }
-
 
 #bordersButton {}
 
@@ -286,24 +295,24 @@ h3 span {
 	margin: 10px 0px 10px 5px;
 }
 
-.littleFlag > a:hover{
+.littleFlag>a:hover {
 	color: coral;
 }
 
-.text-muted{
+.text-muted {
 	/* BOOSTRAP OVERRIDE */
-	color: rgb(220,220,220)!important;
+	color: rgb(220, 220, 220)!important;
 }
 
-.interested-card{
+.interested-card {
 	padding: 10px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 767px) {
 	.nav-item {
-		width: 50%;
-		margin-left: auto;
-		background-color: rgb(0, 0, 0, 0.5);
+		/* width: 50%;
+		margin-left: auto; */
+		background-color: black;
 	}
 	.navbar-toggler {
 		background-color: rgb(0, 0, 0, 0.5);
@@ -325,10 +334,9 @@ h3 span {
 		padding: 5px;
 		font-size: 14px;
 		text-align: left;
+		border-bottom: 1px solid white;
+		margin-top: 30px;
 	}
-	/* .card h3{
-		font-size: 3vw;
-	} */
 	.edition-image-fuzzy {
 		margin-bottom: 20px;
 	}
@@ -342,5 +350,10 @@ h3 span {
 		/* width: 24vw; */
 		margin-left: 10%;
 		padding: 0;
+	}
+
+	.nav-legible{
+		font-size: 25px !important;
+		margin-top: 0 !important;
 	}
 }

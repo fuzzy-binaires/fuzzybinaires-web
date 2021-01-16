@@ -5,8 +5,6 @@ var contrastOn = 0;
 window.onload = function () {
 
 
-	// ACCESSIBILITY - BEGIN
-
 	bindAccessibilityEvents();
 
 	resetAccesibilityParameters();
@@ -15,8 +13,6 @@ window.onload = function () {
 	var stateVars = window.location.hash.substring(1).split(",");
 	changeToLegibleFont(parseInt(stateVars[0]));
 	changeBackgroundColor(parseInt(stateVars[1]));
-
-	// ACCESSIBILITY - END
 
 
 }
@@ -144,7 +140,22 @@ function changeToLegibleFont(state) {
 		$("li").addClass("textBlockFuzzy-legible");
 		$("li").css("font-size", fontSizes[state]);
 
-		// TODO: ADD THIS FONT CHANGE TO MINI-BIO DIVS
+		// $(".nav-item").css("font-size", fontSizes[0]);
+		// $(".nav-item").css("margin-top", fontSizes[0]);
+		$(".nav-item").addClass("nav-legible");
+
+		$(".card-group").addClass("textBlockFuzzy-legible");
+		$(".card-group").css("font-size", fontSizes[state]);
+
+		$("h3").css("font-size", fontSizes[state]);
+		$("h5").css("font-size", fontSizes[state]);
+
+		$("#descriptionFuzzy").css("width", "60vw");
+		$("h2").addClass("textBlockFuzzy-legible");
+		$("h2").css("font-size", fontSizes[state]);
+
+		$("small").addClass("textBlockFuzzy-legible");
+		$("small").find("p").css("font-size", fontSizes[state]);
 		
 	} else {
 		$(".textBlockFuzzy").removeClass("textBlockFuzzy-legible");
@@ -153,6 +164,21 @@ function changeToLegibleFont(state) {
 		$("li").removeClass("textBlockFuzzy-legible");
 		$("li").css("font-size", 17);
 
+		$(".nav-item").removeClass("nav-legible");
+
+		$(".card-group").removeClass("textBlockFuzzy-legible");
+		$(".card-group").css("font-size", 17);
+		// $(".card-title").removeClass("textBlockFuzzy-legible");
+		// $(".card-title").css("font-size", 17);
+
+		// $("h3").css("font-size", 30);
+
+		$("#descriptionFuzzy").css("width", "24vw");
+		$("h2").removeClass("textBlockFuzzy-legible");
+		$("h2").css("font-size", "1.5rem");
+
+		$("small").removeClass("textBlockFuzzy-legible");
+		$("small").find("p").css("font-size", "15px");
 	}
 }
 
