@@ -1,5 +1,5 @@
 :root {
-	font-size: 17px;
+	font-size: 20px;
 }
 
 @font-face {
@@ -169,7 +169,8 @@ small {
 }
 
 .textBlockFuzzy p {
-	font-size: 17px;
+	font-size: 1em;
+	line-height: 1.8em;
 	font-weight: 200;
 	padding: 0;
 }
